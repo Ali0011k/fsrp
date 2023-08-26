@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final</title>
+</head>
+
+<body>
+    <div>
+        <label for="">فینال مسابقات لیگ استان قزوین </label>
+        <!-- <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul> -->
+        <table>
+            <thead>
+                <tr>
+                    <!-- <td id="nav"></td> -->
+                    <td id="nav">نام ورزشکاران</td>
+                    <td id="nav">سری اول</td>
+                    <td id="nav">سری دوم</td>
+                    <td id="nav">11</td>
+                    <td id="nav">12</td>
+                    <td id="nav">13</td>
+                    <td id="nav">14</td>
+                    <td id="nav">15</td>
+                    <td id="nav">16</td>
+                    <td id="nav">17</td>
+                    <td id="nav">18</td>
+                    <td id="nav">19</td>
+                    <td id="nav">20</td>
+                    <td id="nav">21</td>
+                    <td id="nav">22</td>
+                    <td id="nav">23</td>
+                    <td id="nav">24</td>
+                    <td id="nav">ثبت</td>
+                    
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <form action="" method="post">
+                {% csrf_token %}
+                <tr>
+                    <tr>
+                        
+                        <td>{{form.name}}</td>
+                        <td id="num"><input type="number" value="{{form.seri1.value}}" name="seri1" id="id_seri1" min="0" oninput="validity.valid||(value='');" max="50"></td>
+                        <td id="num"><input type="number" value="{{form.seri2.value}}" name="seri2" id="id_seri2" min="0" oninput="validity.valid||(value='');" max="50"></td>
+                        <td id="num"><input type="number" value="{{form.num11.value}}" name="num11" id="id_num11" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num12.value}}" name="num12" id="id_num12" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num13.value}}" name="num13" id="id_num13" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num14.value}}" name="num14" id="id_num14" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num15.value}}" name="num15" id="id_num15" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num16.value}}" name="num16" id="id_num16" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num17.value}}" name="num17" id="id_num17" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num18.value}}" name="num18" id="id_num18" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num19.value}}" name="num19" id="id_num19" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num20.value}}" name="num20" id="id_num20" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num21.value}}" name="num21" id="id_num21" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num22.value}}" name="num22" id="id_num22" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num23.value}}" name="num23" id="id_num23" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td id="num"><input type="number" value="{{form.num24.value}}" name="num24" id="id_num24" min="0" oninput="validity.valid||(value='');" max="10"></td>
+                        <td><button type="submit">ثبت</button></td>
+                    </tr>
+                    
+
+                </tr>
+                <td>
+                </td>
+                </tr>
+            </form>
+            </tbody>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</body>
+
+</html>

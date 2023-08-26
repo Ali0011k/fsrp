@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(3, 3, 103);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+div {
+    direction: rtl;
+    text-align: center;
+}
+
+label {
+    color: rgb(186, 158, 0);
+    font-size: 20px;
+}
+
+li {
+    color: rgb(186, 158, 0);
+    margin-top: 10px;
+}
+
+table {
+    color: rgb(186, 158, 0);
+    border: 2px black;
+}
+
+#nav {
+    background-color: black;
+    height: 29px;
+}
+
+#bt {
+    background-color: black;
+    color: rgb(186, 158, 0);
+    height: 25px;
+}
+
+#text {
+    height: 25px;
+}
+
+#seri {
+    width: 55px;
+    height: 25px;
+}
+
+#num {
+    width: 40px;
+    height: 25px;
+}
+
+p {
+    background-color: white;
+    width: 55px;
+    height: 29px;
+}
