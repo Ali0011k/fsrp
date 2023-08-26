@@ -49,7 +49,7 @@
                     <td id="nav">23</td>
                     <td id="nav">24</td>
                     <td id="nav"> total </td>
-                    <td><button id="bt" type=" button ">edit</button></td>
+                    <td><a id="bt" type=" button " href="">edit</a></td>
                     <td><a id="bt" type=" button " href="/create/user/final/">add</a></td>
        
                     </td>
@@ -146,6 +146,9 @@
                         </td>
                         <td>
                             <a id="bt" type="button" href="{% url 'final:update' i.id %}">edit</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'final:delete' i.id%}" type="button" id="bt">delete</a>
                         </td>
 
                     </tr>

@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <title>حذف کاربر</title>
+</head>
+<body>
+    <tbody>
+        <form method="post">{% csrf_token %}
+            <p class="py-2">ایا از حذف کاربر "{{ object }}" مطمعن هستید ؟ </p>
+            {{ form }}
+            <input type="submit" value="حذف" class="btn btn-danger">
+        </form>
+    </tbody>
+</body>
+</html>
