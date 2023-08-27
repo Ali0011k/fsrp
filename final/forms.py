@@ -17,3 +17,6 @@ class FinalUserForm(forms.ModelForm):
         ]
         cleaned_data['total'] = sum([field for field in num_fields if field is not None])
         return cleaned_data
+
+class Delete_User(forms.Form):
+    button = forms.CharField()

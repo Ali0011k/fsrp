@@ -1,19 +1,172 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    <title>حذف کاربر</title>
+    <title>final</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-    <tbody>
-        <form method="post">{% csrf_token %}
-            <p class="py-2">ایا از حذف کاربر "{{ object }}" مطمعن هستید ؟ </p>
-            {{ form }}
-            <input type="submit" value="حذف" class="btn btn-danger">
-        </form>
-    </tbody>
+    <div>
+        <label for="">فینال مسابقات لیگ استان قزوین </label>
+        <!-- <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul> -->
+        <table>
+            <thead>
+                <tr>
+                    <!-- <td id="nav"></td> -->
+                    <td id="nav">نام ورزشکاران</td>
+                    <td id="nav">سری اول</td>
+                    <td id="nav">سری دوم</td>
+                    <td id="nav">11</td>
+                    <td id="nav">12</td>
+                    <td id="nav">13</td>
+                    <td id="nav">14</td>
+                    <td id="nav">15</td>
+                    <td id="nav">16</td>
+                    <td id="nav">17</td>
+                    <td id="nav">18</td>
+                    <td id="nav">19</td>
+                    <td id="nav">20</td>
+                    <td id="nav">21</td>
+                    <td id="nav">22</td>
+                    <td id="nav">23</td>
+                    <td id="nav">24</td>
+                    <td id="nav"> total </td>
+                    <td id="nav">delete</td>
+                    <td id="nav"><a id="bt" type=" button " href="/home/">home</a></td>
+                    <td></td>
+       
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in object %}
+                <tr>
+                    <tr>
+                        <td>{{i.name}}</td>
+
+                        {% if i.seri1 %}
+                        <td>{{i.seri1}}</td> 
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.seri2 %}
+                        <td>{{i.seri2}}</td> 
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num11 %}
+                        <td>{{i.num11}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num12 %}
+                        <td>{{i.num12}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num13 %}
+                        <td>{{i.num13}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num14 %}
+                        <td>{{i.num14}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num15 %}
+                        <td>{{i.num15}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num16 %}
+                        <td>{{i.num16}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num17 %}
+                        <td>{{i.num17}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num18 %}
+                        <td>{{i.num18}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num19 %}
+                        <td>{{i.num19}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num20 %}
+                        <td>{{i.num20}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num21 %}
+                        <td>{{i.num21}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num22 %}
+                        <td>{{i.num22}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num23 %}
+                        <td>{{i.num23}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        {% if i.num24 %}
+                        <td>{{i.num24}}</td>
+                        {% else %}
+                        <td>0</td>
+                        {% endif %}
+                        <td>
+                            {{i.total}} 
+                        </td>
+                       <td>
+                        <form method="post">{% csrf_token %}
+                            
+                            <input name="button" type="submit" value="delete" class="btn btn-danger" style="cursor: pointer;">
+                        </form>
+                       </td>
+
+                    </tr>
+                    
+
+                </tr>
+                <td>
+                </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
 </body>
 </html>

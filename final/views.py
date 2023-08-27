@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from .models import *
 from .mixins import *
 from .forms import *
@@ -51,7 +51,19 @@ class Final_User_Update(UpdateView, Final_user_FiedsMixin):
         form.instance.total = sum([field for field in num_fields if field is not None])
         return super().form_valid(form)
 
-class Final_User_delete(DeleteView):
-    model = Final_User
-    success_url = reverse_lazy("final:home")
-    template_name = "user_delete.html"
+# class Final_User_delete(DeleteView):
+#     model = Final_User
+#     success_url = reverse_lazy("final:home")
+#     template_name = "user_delete.html"
+    
+def Final_User_delete(request , id):
+    user_id = id
+    user = Final_User.objects.all().filter(id = user_id)
+    if request.method == 'POST':
+        form = Delete_User(request.POST)
+        if form.is_valid():
+            user.delete()
+            return redirect('/home/')
+    return render(request , 'user_delete.html' , {
+        'object':user
+    })
