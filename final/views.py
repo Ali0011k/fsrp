@@ -51,10 +51,6 @@ class Final_User_Update(UpdateView, Final_user_FiedsMixin):
         form.instance.total = sum([field for field in num_fields if field is not None])
         return super().form_valid(form)
 
-# class Final_User_delete(DeleteView):
-#     model = Final_User
-#     success_url = reverse_lazy("final:home")
-#     template_name = "user_delete.html"
     
 def Final_User_delete(request , id):
     user_id = id
