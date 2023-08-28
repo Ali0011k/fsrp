@@ -63,3 +63,7 @@ def Final_User_delete(request , id):
     return render(request , 'user_delete.html' , {
         'object':user
     })
+    
+def delete_all(request):
+    Final_User.objects.all().delete()
+    return redirect('/home/')

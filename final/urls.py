@@ -11,5 +11,7 @@ urlpatterns = [
     path('create/user/final/' , Final_User_Create.as_view(),name='create'),
     path('update/user/final/<int:pk>' , Final_User_Update.as_view(),name='update'),
     path('delete/user/final/<int:id>' , Final_User_delete,name='delete'),
+    path('delete/all/users/' , delete_all , name='DeleteAll'),
+    
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
